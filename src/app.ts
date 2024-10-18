@@ -21,7 +21,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Para Parsear Multipart/form-data (que envolve arquivos)
 app.use(upload.array("tissaum"));
-app.use(express.static('public'));
+app.use(express.static("public"));
+
+// Rota Inicial: Por enquanto, direcionar para montadoras.
+app.get("/", (req: Request, res: Response) => {
+  console.log("Rota raiz acessada. Redirecionando para Montadoras.");
+  res.redirect("/montadoras/");
+});
 
 // Configurar rotas
 app.use("/montadoras", montadorasRoutes);
