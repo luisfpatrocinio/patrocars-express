@@ -10,8 +10,11 @@ block content
             .col-md-8.offset-md-2
                 ul.list-group
                     each montadora in montadoras 
-                        li.list-group-item= montadora.name
-
+                        li.list-group-item.d-flex.w-100.justify-content-between
+                            p= montadora.name
+                            form.form(action="deleteMontadora/" + montadora.id, method="post")
+                                button.btn.btn-primary Deletar
+                            
                 a.mt-2.btn.btn-primary(href="criar") Criar Montadora
                 
                 
