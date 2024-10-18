@@ -5,7 +5,6 @@ import {
 } from "../repositories/montadorasRepository";
 
 export function showMontadoras(req: Request, res: Response): void {
-  // TODO: Obter montadoras a partir do repository.
   const montadoras = getAllMontadoras();
 
   // Aqui o servidor vai precisar criar uma página e me devolver como response.
