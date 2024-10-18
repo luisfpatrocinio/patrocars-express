@@ -1,6 +1,6 @@
 # PatroCars Express
 
-# Projeto de Aplicação Web Server-Side Rendering
+Projeto de Aplicação Web Server-Side Rendering
 
 ## Descrição
 
@@ -8,7 +8,7 @@ Este projeto é uma aplicação web tradicional utilizando **server-side renderi
 
 Foi utilizado o **Pug** como template engine para gerar o HTML de forma dinâmica, o **Bootstrap** para garantir uma interface responsiva e moderna, e o **Express.JS** para gerenciar as rotas e a lógica do servidor.
 
-Este projeto é a primeira atividade da disciplina de **Programação para Internet 2**, do curso de **Análise e Desenvolvimento de Sistemas** do **IFPI - 2024**, sob orientação do professor **Rogério Silva**. [GitHub do professor Rogério](https://github.com/rogeriosilva-ifpi/).
+Este projeto é a primeira atividade da disciplina de **Programação para Internet 2**, do curso de **Análise e Desenvolvimento de Sistemas** do **IFPI - 2024**, sob orientação do professor [**Rogério Silva**](https://github.com/rogeriosilva-ifpi/).
 
 ## Tecnologias Utilizadas
 
