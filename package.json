@@ -2,7 +2,7 @@
   "name": "patrocars-reborn-express",
   "version": "1.0.0",
   "description": "Nova Patrocars, dessa vez em Express JS.",
-  "main": "index.js",
+  "main": "main.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

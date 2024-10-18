@@ -1,12 +1,14 @@
 import express, { Request, Response } from "express";
+import { montadorasRoutes } from "./routes/montadorasRoutes";
 
 // Instancia do Express
 const app = express();
-const PORT = 3000;
 
+// Confiurações do App
 app.set("views", "./templates");
 app.set("view engine", "pug");
 
+// Rota de Teste
 app.get("/", (req: Request, res: Response) => {
   res.render("index", {
     title: "Saudações!!!",
@@ -14,6 +16,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on PORT: ${PORT}`);
-});
+// Configurar rotas
+app.use('/montadoras', montadorasRoutes);
+
+export default app;
