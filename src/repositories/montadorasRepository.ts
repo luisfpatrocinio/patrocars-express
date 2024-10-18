@@ -1,11 +1,7 @@
 const montadoras: Array<any> = [
-  { name: "ryan faustino", foundationYear: 2020, country: "Brazil" },
-  { name: "xamã cardoso", foundationYear: 2018, country: "Brazil" },
-  {
-    name: "luis felipe dos santos patrocinio",
-    foundationYear: 2019,
-    country: "Brazil",
-  },
+  { name: "Fiat", foundationYear: 1899, country: "Itália" },
+  { name: "Hyundai", foundationYear: 1967, country: "Coréia do Sul" },
+  { name: "BMW", foundationYear: 1916, country: "Alemanha" },
 ];
 
 export function getAllMontadoras(): Array<any> {

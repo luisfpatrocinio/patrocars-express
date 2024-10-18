@@ -1,32 +1,16 @@
-// Paleta: https://lospec.com/palette-list/juicyfruit-16
+extends base.pug
 
-doctype html
-html
-    head 
-        title Lista de Montadoras 
-        // Incluindo o CSS do Bootstrap através do CDN.
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css")
+block headExtra 
+    title Listagem de Montadoras
 
-        style.
-            .btn-primary {
-                background-color: #5273dd;
-                border-color: #2f38a8;
-            }
-            .btn-primary:hover {
-                background-color: #77c3f6;
-                border-color: #5273dd;
-            }
+block content  
+    h1.text-center.mt-5= title
+    .container
+        .row
+            .col-md-8.offset-md-2
+                ul.list-group
+                    each montadora in montadoras 
+                        li.list-group-item= montadora.name
 
-        // Incluindo o JS do Bootstrap e dependências.
-        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
-    body 
-        h1.text-center.mt-5= title
-        .container
-            .row
-                .col-md-8.offset-md-2
-                    ul.list-group
-                        each montadora in montadoras 
-                            li.list-group-item= montadora.name
-
-                    a.mt-2.btn.btn-primary(href="criar") Criar Montadora
-                    
+                a.mt-2.btn.btn-primary(href="criar") Criar Montadora
+                
