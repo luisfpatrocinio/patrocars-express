@@ -82,3 +82,10 @@ body {
     background-color: #252532; 
     z-index: -2;
 }
+
+.appHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajuste conforme necessário */
+}
