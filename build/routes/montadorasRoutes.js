@@ -7,4 +7,6 @@ const montadorasController_1 = require("../controllers/montadorasController");
 const router = (0, express_1.Router)();
 exports.montadorasRoutes = router;
 // Definir as rotas desse router.
-router.get('/', montadorasController_1.showMontadoras);
+router.get("/", montadorasController_1.showMontadoras);
+router.get("/criar", montadorasController_1.criarMontadoras);
+router.post("/criar/processarMontadora", montadorasController_1.processarMontadoraCriada);

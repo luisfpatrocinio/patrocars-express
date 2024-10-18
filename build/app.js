@@ -5,18 +5,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const montadorasRoutes_1 = require("./routes/montadorasRoutes");
+const body_parser_1 = __importDefault(require("body-parser"));
+const multer_1 = __importDefault(require("multer"));
+const upload = (0, multer_1.default)();
 // Instancia do Express
 const app = (0, express_1.default)();
 // Confiurações do App
 app.set("views", "./templates");
 app.set("view engine", "pug");
-// Rota de Teste
-app.get("/", (req, res) => {
-    res.render("index", {
-        title: "Saudações!!!",
-        message: "Olár galerínea.",
-    });
-});
+// Para Parsear JSON
+app.use(body_parser_1.default.json());
+// Para Parsear Form
+app.use(body_parser_1.default.urlencoded({ extended: true }));
+// Para Parsear Multipart/form-data (que envolve arquivos)
+app.use(upload.array("tissaum"));
+app.use(express_1.default.static('public'));
 // Configurar rotas
-app.use('/montadoras', montadorasRoutes_1.montadorasRoutes);
+app.use("/montadoras", montadorasRoutes_1.montadorasRoutes);
 exports.default = app;
