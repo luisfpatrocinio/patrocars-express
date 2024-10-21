@@ -26,6 +26,8 @@ Este projeto é a primeira atividade da disciplina de **Programação para Inter
 - Uso de **Pug** para geração de templates.
 - Interface totalmente responsiva com **Bootstrap**.
 - Possibilidade de customização de estilos (por exemplo, botões customizados).
+- Atualização das informações das montadoras através de formulário.
+- Remoção de Montadoras
 
 ## Principais Rotas:
 
@@ -45,9 +47,9 @@ Este projeto é a primeira atividade da disciplina de **Programação para Inter
 
 ## Próximas Funcionalidades
 
-- **Edição de Montadoras**: Adicionar funcionalidade para editar montadoras já criadas.
 - **Validação de Formulários**: Incluir validação dinâmica no front-end para melhorar a experiência do usuário.
 - **Persistência**: Integração com banco de dados para armazenar e gerenciar montadoras.
+- **Confirmação ao Excluir**: Adicionar uma confirmação antes de excluir uma montadora para evitar acidentes.
 
 ## Deploy
 
