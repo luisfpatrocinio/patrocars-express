@@ -46,11 +46,8 @@ Este projeto é a primeira atividade da disciplina de **Programação para Inter
 ## Próximas Funcionalidades
 
 - **Edição de Montadoras**: Adicionar funcionalidade para editar montadoras já criadas.
-- **Exclusão de Montadoras**: Implementar a exclusão de montadoras.
-- **Autenticação**: Adicionar autenticação para controlar o acesso às operações de criação, edição e exclusão.
 - **Validação de Formulários**: Incluir validação dinâmica no front-end para melhorar a experiência do usuário.
 - **Persistência**: Integração com banco de dados para armazenar e gerenciar montadoras.
-- **Deploy**: Publicar a aplicação em um serviço de hospedagem para torná-la acessível publicamente.
 
 ## Deploy
 
