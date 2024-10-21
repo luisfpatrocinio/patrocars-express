@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.processarMontadoraDeletada = exports.processarMontadoraCriada = exports.criarMontadoras = exports.showMontadoras = void 0;
+exports.processarMontadoraEditada = exports.editMontadora = exports.processarMontadoraDeletada = exports.processarMontadoraCriada = exports.criarMontadoras = exports.showMontadoras = void 0;
 const montadorasRepository_1 = require("../repositories/montadorasRepository");
 function showMontadoras(req, res) {
     const montadoras = (0, montadorasRepository_1.getAllMontadoras)();
@@ -35,3 +35,24 @@ function processarMontadoraDeletada(req, res) {
     res.redirect("/montadoras/");
 }
 exports.processarMontadoraDeletada = processarMontadoraDeletada;
+function editMontadora(req, res) {
+    const id = Number(req.params.id);
+    console.log("Redirecionando para a página de edição, para editar a montadora de ID: " +
+        String(id));
+    const montadora = (0, montadorasRepository_1.getAllMontadoras)().find((montadora) => montadora.id === id);
+    console.log(montadora);
+    res.render("montadorasEdit", {
+        title: "Editar Montadora",
+        montadora: montadora,
+    });
+}
+exports.editMontadora = editMontadora;
+function processarMontadoraEditada(req, res) {
+    console.log("Editando montadora...");
+    const montadoraEditada = req.body;
+    montadoraEditada.id = Number(montadoraEditada.id);
+    montadoraEditada.foundationYear = Number(montadoraEditada.foundationYear);
+    (0, montadorasRepository_1.updateMontadora)(montadoraEditada);
+    res.redirect("/montadoras/");
+}
+exports.processarMontadoraEditada = processarMontadoraEditada;

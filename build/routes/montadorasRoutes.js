@@ -11,3 +11,5 @@ router.get("/", montadorasController_1.showMontadoras);
 router.get("/criar", montadorasController_1.criarMontadoras);
 router.post("/criar/processarMontadora", montadorasController_1.processarMontadoraCriada);
 router.post("/deleteMontadora/:id", montadorasController_1.processarMontadoraDeletada);
+router.post("/edit/:id", montadorasController_1.editMontadora);
+router.post("/editingMontadora", montadorasController_1.processarMontadoraEditada);
