@@ -16,8 +16,8 @@ router.get("/", showMontadoras);
 router.get("/criar", criarMontadoras);
 router.post("/criar/processarMontadora", processarMontadoraCriada);
 router.post("/deleteMontadora/:id", processarMontadoraDeletada);
-router.post("/edit/:id", editMontadora);
-router.post("/editingMontadora", processarMontadoraEditada);
+router.put("/edit/:id", editMontadora);
+router.post("/editingMontadora/:id", processarMontadoraEditada);
 
 // Exportar o router usando um alias.
 export { router as montadorasRoutes };

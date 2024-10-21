@@ -48,9 +48,10 @@ function editMontadora(req, res) {
 }
 exports.editMontadora = editMontadora;
 function processarMontadoraEditada(req, res) {
+    const montadoraId = Number(req.params.id);
     console.log("Editando montadora...");
     const montadoraEditada = req.body;
-    montadoraEditada.id = Number(montadoraEditada.id);
+    montadoraEditada.id = montadoraId;
     montadoraEditada.foundationYear = Number(montadoraEditada.foundationYear);
     (0, montadorasRepository_1.updateMontadora)(montadoraEditada);
     res.redirect("/montadoras/");

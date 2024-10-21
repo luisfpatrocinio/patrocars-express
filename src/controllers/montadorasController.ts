@@ -63,9 +63,11 @@ export function editMontadora(req: Request, res: Response): void {
 }
 
 export function processarMontadoraEditada(req: Request, res: Response): void {
+  const montadoraId = Number(req.params.id);
+
   console.log("Editando montadora...");
   const montadoraEditada = req.body;
-  montadoraEditada.id = Number(montadoraEditada.id);
+  montadoraEditada.id = montadoraId;
   montadoraEditada.foundationYear = Number(montadoraEditada.foundationYear);
 
   updateMontadora(montadoraEditada);

@@ -7,13 +7,13 @@ block content
     h1.text-center.pt-5= title
     h2.text-center.pt-3 Editando a montadora #{montadora.name}
     .container
-        form.form(action="/montadoras/editingMontadora", method="post") 
-            input(type="hidden", name="id", value=montadora.id, pattern="\d+")
+        form.form(action="/montadoras/editingMontadora/" + String(montadora.id), method="post") 
+            //- input(type="hidden", name="id", value=montadora.id, pattern="\d+")
             label.form-label.mWt-2(for="name") Nome da montadora: 
             input.form-control(type="text", name="name", value=montadora.name)
             label.form-label.mt-2(for="country") País: 
             input.form-control(type="text", name="country", value=montadora.country)
             label.form-label.mt-2(for="foundationYear") Ano de fundação:
             input.form-control(type="number", name="foundationYear", value=montadora.foundationYear)
-            button.btn.btn-primary.mt-2.col-md-4.offset-md-4 Editar
+            button.btn.btn-primary.mt-2.col-md-4.offset-md-4 Salvar
             button.btn.btn-secondary.mt-2.col-md-4.offset-md-4(type="button", onclick="window.history.back()") Voltar
